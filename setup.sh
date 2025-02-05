@@ -1,6 +1,4 @@
-# gitea-k8s
-Install gitea on k8 with lets encrypt ssl
-
+#!/bin/bash
 sudo snap install microk8s --classic
 sudo usermod -a -G microk8s ubuntu
 
@@ -30,5 +28,3 @@ kubectl describe certificate
 
 helm repo add gitea-charts https://dl.gitea.com/charts/
 helm install gitea gitea-charts/gitea
-
-microk8s dashboard-proxy
